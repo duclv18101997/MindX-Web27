@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href='./style.css'
+      type='text/css'
+      rel='stylesheet'
+    />
+		<title>Document</title>
+	</head>
+
+	<body>
+    <div class='container'>
+      <div class='register'>
+        <h3>Register</h3>
+        <div class='name-container'>
+          <h5>Name</h5>
+          <div class='row'>
+            <label>Username<span class='required'>*</span></label>
+            <input class='username-input' type="text"/>
+          </div>
+          <div id="username-error-message" class="error-message"></div>
+          <div class='row'>
+            <label>First name</label>
+            <input type="text"/>
+          </div>
+          <div class='row'>
+            <label>Last name</label>
+            <input type="text"/>
+          </div>
+          <div class='row'>
+            <label>Nick name</label>
+            <input type="text"/>
+          </div>
+        </div>
+
+        <div class='contact-container'>
+          <h5>Contact Info</h5>
+          <div class='row'>
+            <label>Email<span class='required'>*</span></label>
+            <input class="email-input" type="email"/>
+          </div>
+          <div id="email-error-message" class="error-message"></div>
+          <div class='row'>
+            <label>Website</label>
+            <input type="text"/>
+          </div>
+        </div>
+
+        <div class='about-container'>
+          <h5>About yourself</h5>
+          <div class='row'>
+            <label>Biography Info</label>
+            <textarea rows='6'></textarea>
+          </div>
+          <div class='row'>
+            <label>Password<span class='required'>*</span></label>
+            <input class="password-input" type="password"/>
+          </div>
+          <div id="password-error-message" class="error-message"></div>
+          <div class='row'>
+            <label>Repeat Password<span class='required'>*</span></label>
+            <input class="repeat-password-input" type="password"/>
+          </div>
+          <div id="repeat-error-message" class="error-message"></div>
+        </div>
+
+        <div class='checkbox-container'>
+          <input type='checkbox' />
+          Send these credential via email
+        </div>
+
+        <div class='button-container'>
+          <button class='register-button'>Register</button>
+        </div>
+      </div>
+      <div class='sidebar'>
+        <div class="search">
+          <input type="search" id="search" placeholder="Search..." />  
+          <img src="../html-intro/image/search.png" />
+        </div>
+
+        <div class="recent-post">
+          <h4>RECENT POSTS</h4>
+          <p>Well organized and easy to understand Web building tutorials</p>
+          <p>Learn how to create an animated search form with CSS</p>
+          <p>Just a simple responsive search bar</p>
+          <p>Excellent search box design help to enhance user experience</p>
+          <p>Update of October 2018 collection</p>
+        </div>
+
+        <div class="recent-comment">
+          <h4>RECENT COMMENTS</h4>
+          <div class="comment">
+            <img src="../html-intro/image/email.png" />
+            <p>Set different margins for all four sides</p>
+          </div>
+        </div>
+
+        <div class="archives">
+          <h4>ARCHIVES</h4>
+          <div class="archives-calendar">
+            <img src="../html-intro/image/calendar.png" />
+            <p>February 2019</p>
+          </div>
+        </div>
+
+        <div class="categories">
+          <h4>CATEGORIES</h4>
+          <div class="categories-p">
+            <img src="../html-intro/image/folder.png" />
+            <p>Blog</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<script src="../js-introduction/intro.js"></script>
+	</body>
+</html>
