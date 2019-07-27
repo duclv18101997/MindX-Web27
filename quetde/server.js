@@ -17,7 +17,9 @@ app.get('/about',(req,res) => {
 })
 
 app.listen(2000, (error) => {
-    if(error) console.log('Error: ',error);
+    if(error){
+        console.log('Error: ',error);
+    } 
     else{
         console.log('Server listen on port 2000...');
     }
