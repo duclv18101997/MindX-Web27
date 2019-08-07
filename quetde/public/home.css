@@ -1,123 +1,80 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-.header{
-    background-image: url('./image/maldives.jpg');
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-}
-
-.header h1{
-    color: white;
-    padding-top: 50px;
-    margin-left: 50%;
-}
-
-.header p{
-    color: #ffffff;
-    margin-left: 50%;
+    box-sizing: border-box; 
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main-content{
-    background-color: #afafaf;
-    padding: 25px 20px;
+    width: 70%;
+    margin: auto;
 }
-
-.main-content p{
-    margin-top: 10px;
-    color: gray;
+nav{
+    background-color: #222222;
+    height: 40px;
+    color:white;
 }
-.main-content .galery {
+nav ul {
+    list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-direction: row;
+    margin-left: 10px;
+    padding-top: 8px;
 }
-
-.main-content .galery .galery-left{
-    width: 60%;
-    margin-top: 40px;
+nav ul li {
+    margin-right: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+}
+nav ul li.logo a {
+    font-weight: bold;
+}
+.question-content{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.btn-group{
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
-
-.main-content .galery  .galery-left .Amer {
-    background-image:  url('./image/Amer.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 45%;
-    height: 150px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+.btn{
+    margin: auto;
+    text-align: center;
+    
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    margin-top: 30px;
 }
-
-.main-content .galery  .galery-left .Jap {
-    background-image:  url('./image/Jap.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 45%;
-    height: 150px;
-    margin-bottom: 10px;
-}
-
-.main-content .galery  .galery-left .Sig {
-    background-image:  url('./image/Sig.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 45%;
-    height: 150px;
-    margin-right: 5px;
-}
-
-.main-content .galery .galery-left .Vie {
-    background-image:  url('./image/Vie.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 45%;
-    height: 150px;
-}
-
-.main-content .galery .Frc {
-    background-image:  url('./image/Fra.jpg');
-    background-size: cover;
-    background-position: center;
-    margin-top: 40px;
-    width: 30%;
-    height: 300px;
-}
-
-.main-content .galery h4{
+#dislike{
+    background-color: #d9534f;
     color: white;
 }
 
-.main-content .galery .textcenter{
-    /* text-align:  center;
-    line-height: 150px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#like{
+    background-color: #337ab7;
+    color: white;
 }
 
-.footer{
-    background-color: white;
-    display: flex;
-    padding-top: 30px;
-    height: 150px;
-    padding-left: 20px;
-    padding-right: 20px;
+.btn-next{
+    
+    
+   text-align: center;
 }
 
-.menu{
-    height: 32px;
-    text-align: center;
-}
-
-.menu a{
-    margin: 0 10px;
+#vote-result, #other-question{
+    border: 1px solid black;
+    background-color: #fff;
+    color: black;
 }

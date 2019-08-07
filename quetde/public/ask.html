@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Quyết đê</title>
     <link href="./ask.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <div >
-        <a href="/ask">Hỏi Nhanh</a>
-        <a href="/">Đáp gọn</a>
-    </div>
+        <nav>
+                <ul>
+                    <li class="logo"><a href="#">Quyết.đê!</a></li>
+                    <li><a href="/ask">Hỏi nhanh</a></li>
+                    <li><a href="/">Đáp gọn</a></li>
+                </ul>
+        
+            </nav>
     <div class="form-container">
         <h2>Hãy hỏi cộng đồng một câu hỏi: </h2>
         <form>
-            <textarea rows="6"></textarea>
+            <textarea class="question-content" rows="6"></textarea>
             <div>Còn lại 200/200 kí tự</div>
-            <input type="submit" value="Gửi"/>
+            <input type="submit" class="submit-button" value="Gửi"/>
         </form>
     </div>
+    <script src="./ask.js"></script>
 </body>
 </html>

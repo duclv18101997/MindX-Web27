@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question Detail</title>    
+    <link href="./question-detail.css" rel='stylesheet' type="text/css">
+    <style>
+    
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    color: #424242;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-content {
+            width: 80%;
+            margin: auto;
+        }
+        .btn {
+            display: flex;
+            height: 20px;
+        }
+        button {
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+            border: none;
+            box-shadow: none;
+            margin-top: 30px;
+        }
+        .like {
+            background-color: #337ab7;
+            text-align: center;
+            width: 50%;
+            height: 100%;
+            font-size: 20px;
+            padding-top: 5px;
+            color: white;
+        }
+        .dislike {
+            text-align: center;
+            width: 50%;
+            background-color: #d9534f;
+            height: 100%;
+            font-size: 20px;
+            padding-top: 5px;
+            color: white;
+        }
+        .rate-bar {
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+        }
+        .vote {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 17px;
+        }
+        .question-content {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        nav{
+            background-color: #222222;
+            height: 40px;
+            color:white;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+            padding-top: 8px;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 17px;
+            color: #9d9d9d;
+        }
+        nav ul li.logo a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo"><a href="#">Quyết.đê!</a></li>
+            <li><a href="/ask">Hỏi nhanh</a></li>
+            <li><a href="/">Đáp gọn</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="main-content">
+        <div class="question-content">
+            Something
+        </div>
+
+        <div class="vote">
+            <span class="vote-number">6</span> vote
+        </div>
+
+        <div class="rate-bar">
+            <div class="dislike">40%</div>
+            <div class="like">60%</div>
+        </div>
+
+        <div class="btn">
+            <button id="btn">Xem câu hỏi khác</button>
+        </div>
+    </div>
+
+
+
+    <script src="/question-detail.js"></script>
+</body>
+
+</html>

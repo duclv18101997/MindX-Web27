@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        .main-content {
+            width: 80%;
+            margin: auto;
+        }
+        .btn {
+            display: flex;
+            height: 20px;
+        }
+        button {
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+            border: none;
+            box-shadow: none;
+            margin-top: 30px;
+        }
+        .like {
+            background-color: #337ab7;
+            text-align: center;
+            width: 50%;
+            height: 100%;
+            font-size: 20px;
+            padding-top: 5px;
+            color: white;
+        }
+        .dislike {
+            text-align: center;
+            width: 50%;
+            background-color: #d9534f;
+            height: 100%;
+            font-size: 20px;
+            padding-top: 5px;
+            color: white;
+        }
+        .rate-bar {
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+        }
+        .vote {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 17px;
+        }
+        .question-content {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        nav{
+            background-color: #222222;
+            height: 40px;
+            color:white;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+            padding-top: 8px;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 17px;
+            color: #ffffff;
+        }
+        nav ul li.logo a {
+            font-weight: bold;
+        }
+
+        

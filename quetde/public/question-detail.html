@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/question-detail.css" />
     <title>Quyết đê</title>
-    <link rel="stylesheet" type="text/css" href="./home.css" />
 </head>
-
 <body>
         <nav>
                 <ul>
@@ -16,23 +14,22 @@
                     <li><a href="/ask">Hỏi nhanh</a></li>
                     <li><a href="/">Đáp gọn</a></li>
                 </ul>
-        
             </nav>
         
-            <section class="main-content">
+            <div class="main-content">
                 <div class="question-content">
                 </div>
-                <div class="btn-group">
-                    <button class="btn" id="dislike">Sai/Không/Trái</button>
-                    <button class="btn" id="like">Đúng/Có/Phải</button>
+                <div class="vote">
+                    <span class="vote-number"></span> votes
                 </div>
-                <div class="btn-next">
-                    <button class="btn" id="vote-result">Kết quả vote</button>
-                    <button class="btn" id="other-question">Câu hỏi khác</button>
+                <div class="rate-bar">
+                    <div class="dislike"></div>
+                    <div class="like"></div>
                 </div>
-            </section>
-
-            <script src="/home.js"></script>
+                <div class="btn">
+                    <button id="btn">Xem câu hỏi khác</button>
+                </div>
+            </div>
+    <script src="/question-detail.js"></script>
 </body>
-
 </html>
