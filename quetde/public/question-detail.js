@@ -7,7 +7,7 @@ window.onload = () => {
     const pathNameParts = pathname.split('/');
     const questionId = pathNameParts[pathNameParts.length -1 ];
 
-    let UquestionContent = document.querySelector('.question-content');
+    let questionContent = document.querySelector('.question-content');
     let voteNumber = document.querySelector('.vote-number');
     let like = document.querySelector('.like');
     let dislike = document.querySelector('.dislike');
@@ -22,8 +22,8 @@ window.onload = () => {
     .then((data) => {
       //   const questionContent = data.questionContent;
         console.log(data);
-        if(UquestionContent){
-            UquestionContent.innerHTML = data.data.content;
+        if(questionContent){
+            questionContent.innerHTML = data.data.content;
            
         }
 
@@ -54,7 +54,6 @@ window.onload = () => {
     const otherQuestion = document.getElementById('btn');
         if(otherQuestion){
             otherQuestion.addEventListener('click', (event) => {
-                
                 event.preventDefault();
                 window.location.href = `/`;
             })

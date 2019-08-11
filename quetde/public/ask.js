@@ -1,5 +1,17 @@
 window.onload = () => {
     //logic
+    const countWord = document.querySelector('.count-word');
+    const textAreaContent = document.querySelector('.question-content');
+    if(textAreaContent){
+        textAreaContent.addEventListener('input', () => {
+            if(textAreaContent.value.length <= 200){
+                 countWord.innerHTML = 200 - textAreaContent.value.length;
+            }
+           
+        })
+    }
+
+
     const submitButton = document.querySelector('.submit-button');
     if(submitButton){
         submitButton.addEventListener('click', (event) => {

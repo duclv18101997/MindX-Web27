@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quyết đê</title>
-    <link href="./ask.css" type="text/css" rel="stylesheet"/>
+    <link href="./ask.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 </head>
+
 <body>
-        <nav>
-                <ul>
-                    <li class="logo"><a href="#">Quyết.đê!</a></li>
-                    <li><a href="/ask">Hỏi nhanh</a></li>
-                    <li><a href="/">Đáp gọn</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <a href="#" class="navbar-brand">Quyết.đê!</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/ask" class="nav-link">Hỏi nhanh</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Đáp gọn</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="/search" class="nav-link">Tìm Kiếm</a>
+                            </li>
+                    </ul>
+                </div>
         
             </nav>
     <div class="form-container">
         <h2>Hãy hỏi cộng đồng một câu hỏi: </h2>
         <form>
             <textarea class="question-content" rows="6"></textarea>
-            <div>Còn lại 200/200 kí tự</div>
-            <input type="submit" class="submit-button" value="Gửi"/>
+            <div>Còn lại <span class='count-word'>200</span>/200 kí tự</div>
+            <input type="submit" class="submit-button" value="Gửi" />
         </form>
     </div>
     <script src="./ask.js"></script>
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

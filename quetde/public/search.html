@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/question-detail.css" />
+    <title>Quyết đê</title>
+    <link rel="stylesheet" type="text/css" href="./search.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-    <title>Quyết đê</title>
 </head>
 
 <body>
@@ -32,23 +32,17 @@
                 </div>
         
             </nav>
-
-    <div class="main-content">
-        <div class="question-content">
-        </div>
-        <div class="vote">
-            <span class="vote-number"></span> votes
-        </div>
-        <div class="rate-bar">
-            <div class="dislike"></div>
-            <div class="like"></div>
-        </div>
-        <div class="btn">
-            <button id="btn">Xem câu hỏi khác</button>
+   
+    <div class="container">
+        <form class="search">
+            <h4>Nhập tên câu hỏi: </h4>
+            <input class="search-input" type="text" placeholder="Nhập tên câu hỏi..." />
+            <input type="submit" class='button-search' value="Search" />
+        </form>
+        <div class="search-result">
         </div>
     </div>
-    <script src="/question-detail.js"></script>
-    
+    <script src="./search.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
