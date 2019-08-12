@@ -10,15 +10,16 @@
             width: 80%;
             margin: auto;
         }
-        .btn {
+        .button-other {
             display: flex;
+           justify-content: center;
             height: 20px;
         }
-        button {
+        .btn-other{
             margin: auto;
             text-align: center;
             color: #fff;
-            background-color: #5cb85c;
+            background-color: #4cae4c;
             border-color: #4cae4c;
             padding: 10px 16px;
             font-size: 18px;
