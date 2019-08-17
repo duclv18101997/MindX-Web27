@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
+
+.title, .description{
+    color: black;
+}
+
+.viewVideo{
+    color: blue;
+}
+
+.col-4 img{
+    height: 200px;
+    width: 300px;
+}
+
+.spinner-border{
+    margin-left: 50%;
+}
+
+#spinner{
+    display: none;
+}
