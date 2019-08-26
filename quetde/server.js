@@ -163,14 +163,14 @@ mongoose.connect('mongodb://localhost:27017/quyetde', { useNewUrlParser: true },
 			});
 		});
 
-app.listen(3000, (error) => {
-    if (error) {
-        console.log('Error: ', error);
-    }
-    else {
-        console.log('Server listen on port 3000...');
-    }
-});
+    app.listen(3000, (error) => {
+        if (error) {
+            console.log('Error: ', error);
+        }
+        else {
+            console.log('Server listen on port 3000...');
+        }
+    });
 
     }
 });

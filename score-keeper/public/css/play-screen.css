@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    margin:20px 0px;
+    border-bottom: 2px solid #e447b0;
+}
+
+.add-new-round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    width: 64px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.table{
+    border-bottom: 2px solid #e447b0; 
+}
+
+.name-playerA{
+    padding-left: 10px;
+}

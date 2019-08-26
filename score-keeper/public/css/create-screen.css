@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-row{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+}
+.add-new-round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    margin:20px 0px;
+    border-bottom: 2px solid #e447b0;
+}
+
+.col{
+    margin-bottom: 10px;
+}
