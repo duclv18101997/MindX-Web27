@@ -4,56 +4,40 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 const ScoreKeeperSchema = new mongoose.Schema({
-    player1: {
+    playerA: {
         name: {
             type: String,
+            required: true,
         },
-        score: {
-            rounds: {
-                type: Array,
-            },
-            totalScore: {
-                type: Number,
-            },
+        scores: {
+            type: Array,
         },
     },
-    player2: {
+    playerB: {
         name: {
             type: String,
+            required: true,
         },
-        score: {
-            rounds: {
-                type: Array,
-            },
-            totalScore: {
-                type: Number,
-            },
+        scores: {
+            type: Array,
         },
     },
-    player3: {
+    playerC: {
         name: {
             type: String,
+            required: true,
         },
-        score: {
-            rounds: {
-                type: Array,
-            },
-            totalScore: {
-                type: Number,
-            },
+        scores: {
+            type: Array,
         },
     },
-    player4: {
+    playerD: {
         name: {
             type: String,
+            required: true,
         },
-        score: {
-            rounds: {
-                type: Array,
-            },
-            totalScore: {
-                type: Number,
-            },
+        scores: {
+            type: Array,
         },
     },
 });

@@ -1,34 +1,38 @@
 window.onload = () => {
-    const btnCreate = document.getElementById('btn-create');
-    if (btnCreate) {
-        btnCreate.addEventListener('click', (event) => {
+    const createGameForm = document.querySelector('.create-form');
+    if (createGameForm) {
+        createGameForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            const playerA = document.getElementById('playerA').value;
-            const playerB = document.getElementById('playerB').value;
-            const playerC = document.getElementById('playerC').value;
-            const playerD = document.getElementById('playerD').value;
-            fetch('/create-new-game', {
-                method: 'POST',    
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    playerA: playerA,
-                    playerB: playerB,
-                    playerC: playerC,
-                    playerD: playerD,
+            if (!createGameForm.playerA.value || !createGameForm.playerB.value || !createGameForm.playerC.value || !createGameForm.playerD.value) {
+                Swal.fire({
+                    type: 'error',
+                    title: 'Unauthorized',
+                    text: 'You must fill all fields!',
                 })
-            })
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                window.location.href = `/games/${data.data._id}`;
-            })
-            .catch((error) => {
-                console.log(error);
-                window.alert(error.message);
-            });
-        })
+            } else {
+                fetch('/create-new-game', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        playerA: createGameForm.playerA.value,
+                        playerB: createGameForm.playerB.value,
+                        playerC: createGameForm.playerC.value,
+                        playerD: createGameForm.playerD.value,
+                    }),
+                })
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        // console.log(data.data);
+                        window.location.href = `/games/${data.data._id}`;
+                    })
+                    .catch((error) => {
+                        window.alert(error.message);
+                    })
+            }
+        });
     }
-}
+};

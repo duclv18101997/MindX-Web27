@@ -19,27 +19,27 @@
         <form class="create-form">
             <div class="form-row">
                 <div class="col">
-                    <input type="text" class="form-control" id="playerA" placeholder="Player A">
+                    <input type="text" name="playerA" class="form-control" placeholder="Player A">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" id="playerB" placeholder="Player B">
+                    <input type="text" name="playerB" class="form-control" placeholder="Player B">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" id="playerC" placeholder="Player C">
+                    <input type="text" name="playerC" class="form-control" placeholder="Player C">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" id="playerD" placeholder="Player D">
+                    <input type="text" name="playerD" class="form-control" placeholder="Player D">
                 </div>
 
             </div>
 
             <div class="add-new-round">
-                    <input type="submit" class="btn btn-primary" id='btn-create' value="Create New Game" />
-              </div>
+                <button class="btn btn-primary" type="submit">Create New Game</button>
+            </div>
         </form>
     </div>
 
-    <script src="../js/create-screen.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -49,6 +49,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="../js/create-screen.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </body>
 
 </html>

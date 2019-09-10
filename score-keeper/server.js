@@ -16,49 +16,39 @@ mongoose.connect('mongodb://localhost:27017/score-keeper', { useNewUrlParser: tr
         // public folder
         app.use(express.static('public'));
         app.use(bodyParser.json());
+        app.use((req, res, next) => {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            next();
+        })
 
         app.get('/', (req, res) => {
             res.sendFile(path.resolve(__dirname, './public/html/create-screen.html'));
         });
 
         app.post('/create-new-game', (req, res) => {
-            const scoreA = [], scoreB = [], scoreC = [], scoreD = [];
-            let totalA = totalB = totalC = totalD = 0;
-
             const newGame = {
-                player1: {
+                playerA: {
                     name: req.body.playerA,
-                    score: {
-                        rounds: scoreA,
-                        totalScore: totalA,
-                    },
+                    scores: [],
                 },
-                player2: {
+                playerB: {
                     name: req.body.playerB,
-                    score: {
-                        rounds: scoreB,
-                        totalScore: totalB,
-                    },
+                    scores: [],
                 },
-                player3: {
+                playerC: {
                     name: req.body.playerC,
-                    score: {
-                        rounds: scoreC,
-                        totalScore: totalC,
-                    },
+                    scores: [],
                 },
-                player4: {
+                playerD: {
                     name: req.body.playerD,
-                    score: {
-                        rounds: scoreD,
-                        totalScore: totalD,
-                    },
+                    scores: [],
                 },
             };
 
             ScoreKeeperModel.create(newGame, (error, data) => {
                 if (error) {
-                    res.status(500).json({
+                    res.status(201).json({
                         success: false,
                         message: error.message,
                     });
@@ -81,7 +71,7 @@ mongoose.connect('mongodb://localhost:27017/score-keeper', { useNewUrlParser: tr
             const gameId = req.query.gameId;
             ScoreKeeperModel.findById(gameId, (error, data) => {
                 if (error) {
-                    res.status(500).json({
+                    res.status(200).json({
                         success: false,
                         message: error.message,
                     });
@@ -102,17 +92,8 @@ mongoose.connect('mongodb://localhost:27017/score-keeper', { useNewUrlParser: tr
         });
 
         app.put('/update-score', (req, res) => {
-            // console.log(req.body.scoreValue);
-            // console.log(req.body.data._id);
-            // console.log(req.body.data);
-            // const index = req.body.index;
-            let total = 0;
-            req.body.data.playerA.score.rounds.forEach(element => {
-                total += element;
-            });
-            const updateKey = `${req.body.player}.scores.rounds.${req.body.index}`;
-            console.log(updateKey);
-            ScoreKeeperModel.findOneAndUpdate(
+            const updateKey = `${req.body.player}.scores.${req.body.index}`;
+            ScoreKeeperModel.findByIdAndUpdate(
                                             {
                                                 _id: req.body.data._id,
                                             },
@@ -125,7 +106,6 @@ mongoose.connect('mongodb://localhost:27017/score-keeper', { useNewUrlParser: tr
                                                 new: true,
                                             },
                                             (error, data) => {
-                                                console.log(data.playerA.scores.rounds);
                 if (error) {
                     res.status(500).json({
                         success: false,
@@ -140,6 +120,33 @@ mongoose.connect('mongodb://localhost:27017/score-keeper', { useNewUrlParser: tr
             });
         });
 
+        app.put('/add-new-round', (req, res) => {
+            ScoreKeeperModel.findByIdAndUpdate(
+                                            {
+                                                _id: req.body.id,
+                                            },
+                                            {
+                                                $push: {
+                                                        'playerA.scores': 0,
+                                                        'playerB.scores': 0,
+                                                        'playerC.scores': 0,
+                                                        'playerD.scores': 0,
+                                                    }
+                                            },
+                                            (error, data) => {
+                if (error) {
+                    res.status(500).json({
+                        success: false,
+                        message: error.message,
+                    });
+                } else {
+                    res.status(201).json({
+                        success: true,
+                        data: data,
+                    });
+                }                           
+            });
+        });
 
         app.listen(8080, error => {
             if (error) {
