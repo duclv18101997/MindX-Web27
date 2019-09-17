@@ -5,7 +5,7 @@ mongoose.set('useCreateIndex', true);
 
 const PostSchema = new mongoose.Schema({
     author: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId, //luu tru _id
         ref: 'User',
         required: true,
     },
@@ -17,9 +17,16 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    view:{
+        type:Number,
+        default: 0
+    },
     createdAt: {
         type: Date,
         default: new Date(),
+    },
+    lastModifiedAt: {
+        type: Date,
     }
 
 })

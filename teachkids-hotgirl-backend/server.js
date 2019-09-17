@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const usersRouter = require('./users/users.routes');
 const postsRouter = require('./posts/posts.routes');
 const expressSession = require('express-session');
+const uploadsRouter = require('./uploads/uploads.routes');
 const cors = require('cors');
 
 mongoose.connect('mongodb://localhost:27017/techkids-hotgirls', { useNewUrlParser: true }, (e) => {
@@ -16,6 +17,7 @@ mongoose.connect('mongodb://localhost:27017/techkids-hotgirls', { useNewUrlParse
 
         // start app
         const app = express();
+        app.use(express.static('public'));
         app.use(cors({
             origin : ['http://localhost:3000'],
             credentials: true,
@@ -35,8 +37,10 @@ mongoose.connect('mongodb://localhost:27017/techkids-hotgirls', { useNewUrlParse
             cookie: { secure: false },
         }))
         //router
+        
         app.use('/users', usersRouter);
         app.use('/posts', postsRouter);
+        app.use('/upload', uploadsRouter);
         app.listen(3001, error => {
             if (error) {
                 console.log(error);

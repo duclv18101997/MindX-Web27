@@ -11,12 +11,15 @@ import { async } from 'q';
 class App extends React.Component {
   state = {
     currentUser : '',
+    fullName: '',
   }
 
   componentWillMount() {
     const CurentUser = window.localStorage.getItem('email'); 
+    const fullName = window.localStorage.getItem('fullName');
     this.setState({
       currentUser : CurentUser,
+      fullName: fullName,
     })
   }
 
@@ -42,7 +45,7 @@ class App extends React.Component {
 
   //Post
   handlePost = async (event) => {
-    window.location.href = `/upload`;
+    window.location.href = `/create-post`;
   }
 
   render () {
@@ -57,7 +60,7 @@ class App extends React.Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             {this.state.currentUser ? (
              <div className='navbar-nav mr-auto' style={{diplay: 'flex', alignItems: 'center'}}>
-             Welcome {this.state.currentUser}, <a className="nav-link"  onClick={this.handleLogout}>Log out!</a>
+             Welcome {this.state.fullName}, <a className="nav-link"  onClick={this.handleLogout}>Log out!</a>
            </div>
             ) : (
               <ul className="navbar-nav mr-auto">
@@ -72,7 +75,7 @@ class App extends React.Component {
 
             {this.state.currentUser ? (
               <div className="col-1">
-              <button className="btn btn btn-info" type="submit"  onClick={this.handlePost}>POST</button>
+              <button className="btn btn btn-info" type="submit"  onClick={this.handlePost}>+ POST</button>
               </div>
             ) : null}
            
@@ -85,7 +88,7 @@ class App extends React.Component {
         <div className="container">
         <BrowserRouter >
           <Switch>
-            <Route exact={true} path="/register" component={SignUpForm}>
+            <Route path="/register" component={SignUpForm}>
             </Route>
             <Route path="/login" component={SignInForm}>
             </Route>
@@ -93,7 +96,7 @@ class App extends React.Component {
             </Route>
             <Route path="/current-user" component={CurrentUser}>
             </Route>
-            <Route path="/upload" component={Post}>
+            <Route path="/create-post" component={Post}>
             </Route>
           </Switch>
         </BrowserRouter>

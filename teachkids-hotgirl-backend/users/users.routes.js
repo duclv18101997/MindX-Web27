@@ -54,7 +54,6 @@ usersRouter.post('/register', async (req, res) => {
 usersRouter.post('/login', async (req,res) => {
     try{
         const user = await UsersModel.findOne({ email: req.body.email }).lean();
-            console.log("User:",user);
             if (!user) {
                 res.status(400).json({
                     success: false,
@@ -76,7 +75,7 @@ usersRouter.post('/login', async (req,res) => {
                     message: 'login success',
                     data: {
                         email: user.email,  // luu email phuc vu cho hien thi nguoi dung
-
+                        fullName: user.fullName
                     }
                 });
             }

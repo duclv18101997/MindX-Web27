@@ -51,8 +51,10 @@ class SignInForm extends Component {
           errorMessage: data.message,
         })
       } else {
+        console.log(data);
         //save data to local storeage
         window.localStorage.setItem('email', data.data.email);
+        window.localStorage.setItem('fullName', data.data.fullName);
 
         window.location.href = `/`;
       }
